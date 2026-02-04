@@ -1,288 +1,121 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Victor R. Enomoto | AI Researcher & Software Engineer</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Portfólio de João Victor Rikio Enomoto</title>
     <style>
-        /* --- VARIÁVEIS & CONFIGURAÇÕES GERAIS --- */
-        :root {
-            --bg-dark: #090e16;       /* Fundo quase preto */
-            --bg-card: #121a2b;       /* Fundo dos cartões */
-            --primary: #3b82f6;       /* Azul Tech */
-            --accent: #8b5cf6;        /* Roxo IA */
-            --glow: #60a5fa;          /* Brilho */
-            --text-main: #f1f5f9;     /* Branco suave */
-            --text-muted: #94a3b8;    /* Cinza para textos secundários */
-            --gradient-main: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
             line-height: 1.6;
-            overflow-x: hidden;
         }
-
-        h1, h2, h3 {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-        ul { list-style: none; }
-
-        /* --- CONTAINER --- */
         .container {
-            max-width: 1100px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 24px;
+            background-color: #1e1e1e;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
-
-        section {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        /* --- HEADER / NAV --- */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 0;
-            background: rgba(9, 14, 22, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .profile-header {
             text-align: center;
-            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+            margin-bottom: 40px;
         }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            line-height: 1.1;
+        /* Configuração da FOTO */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Deixa redonda */
+            object-fit: cover;
+            border: 3px solid #00adb5;
             margin-bottom: 15px;
-            font-weight: 700;
         }
-
-        .hero h2 {
-            font-size: 1.8rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            font-weight: 400;
+        h1 {
+            color: #00adb5;
+            margin-bottom: 10px;
         }
-
-        .typing-text {
-            color: var(--accent);
-            font-weight: 700;
-            position: relative;
-        }
-
-        .typing-text::after {
-            content: '|';
-            animation: blink 1s infinite;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: #fff;
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            background: var(--accent);
-            box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.2);
-            color: var(--text-main);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        /* --- ABOUT SECTION --- */
-        .about-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .img-card {
-            position: relative;
-            border-radius: 20px;
-            padding: 10px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
-            border: 1px solid rgba(255,255,255,0.1);
-            aspect-ratio: 3/4; /* Mantém proporção de retrato */
-            overflow: hidden;
-        }
-
-        .img-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Garante que a foto preencha sem distorcer */
-            border-radius: 15px;
-            display: block;
-            filter: grayscale(20%);
-            transition: 0.5s;
-        }
-
-        .img-card:hover img {
-            filter: grayscale(0%);
-            transform: scale(1.02);
-        }
-
-        .section-header {
-            margin-bottom: 30px;
-        }
-
-        .section-header span {
-            color: var(--primary);
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-top: 10px;
-        }
-
-        .about-content p {
-            margin-bottom: 20px;
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            line-height: 1.8; /* Melhor leitura */
-        }
-
-        .highlights {
-            display: flex;
-            gap: 30px;
+        h2 {
+            border-bottom: 2px solid #00adb5;
+            padding-bottom: 10px;
+            color: #ffffff;
             margin-top: 30px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
         }
-
-        .highlight-item h4 {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 5px;
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            color: #aaaaaa;
         }
-
-        .highlight-item span {
-            font-size: 0.9rem;
-            color: var(--text-muted);
+        ul {
+            list-style-type: none; /* Remove bolinhas da lista */
+            padding: 0;
         }
-
-        /* --- SKILLS --- */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
+        li {
+            margin-bottom: 10px;
         }
-
-        .skill-pill {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.3s;
+        strong {
+            color: #00adb5;
         }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
 
-        .skill-pill i { color: var(--primary); }
+    <div class="container">
+        
+        <div class="profile-header">
+            <img src="foto-perfil.jpeg" alt="Foto de João Victor" class="profile-img">
+            
+            <h1>João Victor Rikio Enomoto</h1>
+            <p>Especialista em Automação & IA | Python Developer</p>
+        </div>
 
-        .skill-pill:hover {
-            border-color: var(--primary);
-            background: rgba(59, 130
+        <div class="contact-info">
+            <p>📍 São Paulo, Brasil | 📧 joao.enomoto@example.com</p>
+            <p>🔗 <a href="#" style="color:#00adb5;">LinkedIn</a> | 🔗 <a href="#" style="color:#00adb5;">GitHub</a></p>
+        </div>
+
+        <h2>Sobre Mim</h2>
+        <p>
+            Sou um profissional focado em otimização de processos e desenvolvimento tecnológico. 
+            Tenho experiência prática em Python, criação de bots, automação de tarefas e 
+            análise de dados. Busco transformar problemas complexos em soluções eficientes.
+        </p>
+
+        <h2>Habilidades Técnicas</h2>
+        <ul>
+            <li><strong>Linguagens:</strong> Python, JavaScript, HTML/CSS</li>
+            <li><strong>Ferramentas:</strong> Selenium, Pandas, Git, VS Code</li>
+            <li><strong>IA & Automação:</strong> Integração com APIs (OpenAI), Chatbots</li>
+            <li><strong>Idiomas:</strong> Português (Nativo), Inglês (Intermediário)</li>
+        </ul>
+
+        <h2>Experiência Recente</h2>
+        <ul>
+            <li>
+                <strong>Desenvolvedor de Automação (Freelancer)</strong><br>
+                Criação de scripts para coleta de dados web e automação de relatórios diários, reduzindo o tempo manual em 90%.
+            </li>
+            <li>
+                <strong>Projeto Pessoal: Portfólio com IA</strong><br>
+                Desenvolvimento deste site integrado com um assistente virtual inteligente.
+            </li>
+        </ul>
+
+        <div class="footer">
+            &copy; 2024 João Victor Rikio Enomoto. Todos os direitos reservados.
+        </div>
+
+    </div>
+
+    </body>
+</html>
