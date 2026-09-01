@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 660" role="img" aria-label="Mapa visual de sistemas de IA">
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef2f5"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#243044"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#111827" flood-opacity=".18"/>
+    </filter>
+  </defs>
+
+  <rect x="42" y="28" width="640" height="540" rx="34" fill="url(#panel)" filter="url(#shadow)"/>
+  <rect x="82" y="74" width="560" height="68" rx="18" fill="#111827"/>
+  <circle cx="122" cy="108" r="10" fill="#ef4444"/>
+  <circle cx="154" cy="108" r="10" fill="#22c55e"/>
+  <circle cx="186" cy="108" r="10" fill="#3b82f6"/>
+  <rect x="226" y="96" width="220" height="22" rx="11" fill="#374151"/>
+
+  <g fill="none" stroke="#c8d0da" stroke-width="4">
+    <path d="M382 248 C330 248 310 288 268 288"/>
+    <path d="M382 248 C438 248 462 288 508 288"/>
+    <path d="M268 288 C236 336 236 384 276 426"/>
+    <path d="M508 288 C546 338 540 392 496 426"/>
+    <path d="M276 426 C340 470 432 470 496 426"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="292" y="190" width="180" height="116" rx="22" fill="url(#dark)"/>
+    <text x="382" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#ffffff">RAG</text>
+    <text x="382" y="271" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#cbd5e1">LLM + conhecimento</text>
+  </g>
+
+  <g>
+    <rect x="118" y="238" width="164" height="102" rx="20" fill="#ffffff" stroke="#d9dee5" stroke-width="2"/>
+    <path d="M150 306h26l16-30 24 44 16-25h24" fill="none" stroke="#b4232a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="200" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#111827">Dados</text>
+  </g>
+
+  <g>
+    <rect x="492" y="238" width="164" height="102" rx="20" fill="#ffffff" stroke="#d9dee5" stroke-width="2"/>
+    <rect x="526" y="276" width="96" height="10" rx="5" fill="#2457a6"/>
+    <rect x="526" y="298" width="68" height="10" rx="5" fill="#0f766e"/>
+    <rect x="526" y="320" width="82" height="10" rx="5" fill="#b4232a"/>
+    <text x="574" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#111827">Busca</text>
+  </g>
+
+  <g>
+    <rect x="126" y="404" width="184" height="112" rx="20" fill="#ffffff" stroke="#d9dee5" stroke-width="2"/>
+    <circle cx="170" cy="460" r="18" fill="#0f766e"/>
+    <rect x="204" y="438" width="72" height="10" rx="5" fill="#111827"/>
+    <rect x="204" y="462" width="50" height="10" rx="5" fill="#6b7280"/>
+    <text x="218" y="494" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#111827">Governança</text>
+  </g>
+
+  <g>
+    <rect x="454" y="404" width="184" height="112" rx="20" fill="#ffffff" stroke="#d9dee5" stroke-width="2"/>
+    <path d="M500 476l28-32 25 22 36-48" fill="none" stroke="#2457a6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="546" y="494" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#111827">Produto</text>
+  </g>
+
+  <g opacity=".9">
+    <rect x="86" y="578" width="118" height="18" rx="9" fill="#b4232a"/>
+    <rect x="224" y="578" width="76" height="18" rx="9" fill="#0f766e"/>
+    <rect x="320" y="578" width="142" height="18" rx="9" fill="#2457a6"/>
+    <rect x="482" y="578" width="96" height="18" rx="9" fill="#111827"/>
+  </g>
+</svg>
