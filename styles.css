@@ -208,11 +208,36 @@ h3 {
 }
 
 .hero-visual {
+  display: grid;
   min-width: 0;
+  position: relative;
 }
 
-.hero-visual img {
-  filter: drop-shadow(0 28px 42px rgba(17, 24, 39, 0.18));
+.portrait-frame {
+  align-self: start;
+  aspect-ratio: 1;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  justify-self: end;
+  overflow: hidden;
+  padding: 10px;
+  width: min(72%, 340px);
+  z-index: 2;
+}
+
+.portrait-frame img {
+  border-radius: 6px;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  width: 100%;
+}
+
+.systems-map {
+  filter: drop-shadow(0 28px 42px rgba(17, 24, 39, 0.14));
+  margin-top: -86px;
   width: 100%;
 }
 
@@ -515,6 +540,11 @@ h3 {
 
   .hero-visual {
     max-width: 520px;
+  }
+
+  .portrait-frame {
+    justify-self: start;
+    width: min(64%, 300px);
   }
 
   .metrics,
