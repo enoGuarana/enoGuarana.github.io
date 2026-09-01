@@ -1,271 +1,193 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Portfólio de João Victor Rikio Enomoto, engenheiro de software focado em IA aplicada, RAG, governo digital e produtos web."
-    />
-    <meta name="theme-color" content="#111827" />
-    <meta property="og:title" content="João Victor Rikio Enomoto | Software Engineering & AI" />
-    <meta
-      property="og:description"
-      content="Engenharia de software, IA aplicada, RAG, LLMs soberanas e plataformas digitais."
-    />
+    <meta name="description" content="João Enomoto - Software Engineer focused on Applied AI, backend systems, data infrastructure and reliable AI products." />
+    <meta name="theme-color" content="#080b12" />
+    <meta property="og:title" content="João Enomoto | Applied AI & Data Infrastructure" />
+    <meta property="og:description" content="Portfolio of a software engineer building real AI, backend and data systems." />
     <meta property="og:type" content="website" />
-    <title>João Victor Rikio Enomoto | Software Engineering & AI</title>
+    <title>João Enomoto | Applied AI & Data Infrastructure</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Voltar ao início">
-        <span class="brand-mark">JE</span>
-        <span>João Enomoto</span>
-      </a>
-
-      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
-        <span></span>
-        <span></span>
-      </button>
-
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Home"><span class="brand-mark">JE</span><span>João Enomoto</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
       <nav class="site-nav" data-nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#artigos">Artigos</a>
-        <a href="#contato">Contato</a>
+        <a href="#work" data-i18n="navWork">Projetos</a>
+        <a href="#systems" data-i18n="navSystems">Sistemas</a>
+        <a href="#experience" data-i18n="navExperience">Experiência</a>
+        <a href="#stack" data-i18n="navStack">Stack</a>
+        <a href="#writing" data-i18n="navWriting">Escrita</a>
+        <button class="icon-button" type="button" aria-label="Toggle theme" data-theme-toggle>◐</button>
+        <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero-content">
-          <p class="eyebrow">Software Engineering · AI · Governo Digital</p>
-          <h1>João Victor Rikio Enomoto</h1>
-          <p class="hero-copy">
-            Engenheiro de software em formação na UnDF, atuando com IA aplicada,
-            arquiteturas RAG, plataformas web e soluções digitais para ambientes
-            institucionais que exigem segurança, governança e impacto real.
-          </p>
-          <div class="hero-actions" aria-label="Ações principais">
-            <a class="button primary" href="#projetos">Ver projetos</a>
-            <a class="button secondary" href="https://www.linkedin.com/in/joaoenomoto/" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroKicker">Software Engineer · Applied AI · Data Infrastructure</p>
+          <h1>João Enomoto</h1>
+          <p class="lead" data-i18n="heroLead">Desenvolvo sistemas de IA aplicada, backend e infraestrutura de dados com foco em soluções confiáveis, escaláveis e auditáveis.</p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button primary" href="#work" data-i18n="heroProjects">Ver projetos</a>
+            <a class="button" href="https://github.com/enoGuarana" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button" href="https://www.linkedin.com/in/joaoenomoto/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button" href="cv.html" data-i18n="heroCv">Download CV</a>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Retrato e mapa visual de sistemas de IA">
-          <div class="portrait-frame">
-            <img src="foto-perfil.jpeg" alt="Foto de João Victor Rikio Enomoto" />
+        <div class="system-hero" data-system-hero aria-label="Interactive software architecture diagram">
+          <div class="flow-line"></div>
+          <button class="system-node active" type="button" style="--x: 12%; --y: 18%" data-node="DATA">DATA</button>
+          <button class="system-node" type="button" style="--x: 34%; --y: 34%" data-node="PIPELINES">PIPELINES</button>
+          <button class="system-node" type="button" style="--x: 56%; --y: 49%" data-node="BACKEND">BACKEND</button>
+          <button class="system-node" type="button" style="--x: 77%; --y: 30%" data-node="AI / RAG">AI / RAG</button>
+          <button class="system-node" type="button" style="--x: 63%; --y: 75%" data-node="APPLICATION">APPLICATION</button>
+          <div class="node-readout">
+            <span data-node-title>DATA</span>
+            <p data-node-copy>Structured and unstructured sources prepared for retrieval, analysis and product workflows.</p>
           </div>
-          <img class="systems-map" src="assets/ai-systems-map.svg" alt="" aria-hidden="true" />
         </div>
       </section>
 
-      <section class="metrics" aria-label="Resumo profissional">
-        <div>
-          <strong>UnDF</strong>
-          <span>Engenharia de Software · 2024-2028</span>
-        </div>
-        <div>
-          <strong>Ministério dos Transportes</strong>
-          <span>Tecnologia no setor público</span>
-        </div>
-        <div>
-          <strong>IA aplicada</strong>
-          <span>RAG, LLMs, agentes e dados</span>
-        </div>
+      <section class="proof-strip" aria-label="Professional focus">
+        <div><strong>Applied AI</strong><span>RAG, LLM apps, vector search, evaluation</span></div>
+        <div><strong>Backend & Data</strong><span>Python, FastAPI, Java, PostgreSQL, Kafka</span></div>
+        <div><strong>Reliable Systems</strong><span>Governance, auditability, sovereign infrastructure</span></div>
       </section>
 
-      <section class="section intro" id="sobre">
+      <section class="section build" id="systems">
         <div class="section-heading">
-          <p class="eyebrow">Sobre</p>
-          <h2>Construção de software com visão de produto, dados e responsabilidade.</h2>
+          <p class="eyebrow" data-i18n="buildKicker">What I Build</p>
+          <h2 data-i18n="buildTitle">Sistemas que conectam IA, dados e produto.</h2>
         </div>
-        <div class="intro-grid">
-          <p>
-            Meu trabalho conecta engenharia de software, inteligência artificial e
-            problemas institucionais complexos. Tenho interesse especial por
-            sistemas que transformam conhecimento disperso em interfaces úteis:
-            busca semântica, chatbots RAG, plataformas editoriais, APIs e produtos
-            que precisam ser confiáveis em produção.
-          </p>
-          <p>
-            Além da atuação técnica, publico reflexões sobre IA, lógica,
-            programação, LLMs soberanas e aprendizado contínuo. Meu foco é unir
-            execução prática com fundamentos: arquitetura, qualidade, governança,
-            segurança de dados e clareza para o usuário final.
-          </p>
+        <div class="build-grid">
+          <article><span>01</span><h3>Applied AI</h3><p>RAG, LLM applications, vector search, evaluation, local AI systems.</p><div class="mini-tags">LangChain · LiteLLM · Ollama · Embeddings</div></article>
+          <article><span>02</span><h3>Backend & Data</h3><p>APIs, ingestion, ETL pipelines, relational databases and event-driven communication.</p><div class="mini-tags">FastAPI · Spring Boot · Kafka · PostgreSQL</div></article>
+          <article><span>03</span><h3>Reliable AI Systems</h3><p>Secure deployments for contexts where data control, traceability and governance matter.</p><div class="mini-tags">LGPD · Auditability · Docker · Linux</div></article>
         </div>
       </section>
 
-      <section class="section" id="projetos">
-        <div class="section-heading compact">
-          <p class="eyebrow">Projetos</p>
-          <h2>Trabalhos em IA, dados e plataformas web.</h2>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card featured">
-            <div class="card-topline">
-              <span>LLM · RAG · Setor público</span>
-              <span>2026</span>
+      <section class="section" id="work">
+        <div class="section-heading row"><div><p class="eyebrow" data-i18n="workKicker">Selected Work</p><h2 data-i18n="workTitle">Projetos apresentados como decisões de engenharia.</h2></div></div>
+        <div class="case-list">
+          <article class="case-card is-open">
+            <button class="case-summary" type="button" data-case-toggle><span>01</span><strong>AI Research Platform — INESC-ID</strong><small>FastAPI · pgvector · LiteLLM · Next.js</small></button>
+            <div class="case-body">
+              <div class="case-copy">
+                <p>Plataforma modular para descoberta científica, pesquisa híbrida e assistência baseada em RAG para o grupo MLKD / INESC-ID.</p>
+                <dl><div><dt>Problema</dt><dd>Conteúdo científico distribuído, difícil de explorar e manter editorialmente.</dd></div><div><dt>Solução</dt><dd>Portal público, CMS, ingestão OpenAlex, busca semântica e serviço independente de IA.</dd></div><div><dt>Contribuição</dt><dd>Backend, APIs, integração AI, vector retrieval, ingestão científica e interface integrada.</dd></div></dl>
+              </div>
+              <div class="architecture"><span>OpenAlex</span><span>Ingestion</span><span>PostgreSQL</span><span>pgvector</span><span>Hybrid Search</span><span>LiteLLM</span><span>FastAPI</span><span>Next.js</span></div>
             </div>
-            <h3>Sovereign AI / Secure Internal LLM</h3>
-            <p>
-              Iniciativa interna segura para aplicar LLMs e arquiteturas RAG à
-              recuperação de conhecimento institucional, análise documental e
-              apoio à decisão no setor público brasileiro.
-            </p>
-            <ul class="tag-list" aria-label="Tecnologias e temas">
-              <li>RAG</li>
-              <li>LLMs</li>
-              <li>Governança</li>
-              <li>Auditabilidade</li>
-            </ul>
           </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span>FastAPI · PostgreSQL · pgvector</span>
-              <span>2026</span>
+          <article class="case-card">
+            <button class="case-summary" type="button" data-case-toggle><span>02</span><strong>Sovereign AI for Sensitive Documents</strong><small>Local LLM · RAG · Governance</small></button>
+            <div class="case-body">
+              <div class="case-copy">
+                <p>Sistema de IA para documentos sensíveis com dependência reduzida de APIs externas e maior controle de dados.</p>
+                <dl><div><dt>Problema</dt><dd>Aplicar LLMs em ambientes institucionais sem expor dados internos.</dd></div><div><dt>Solução</dt><dd>Embeddings locais, banco vetorial, recuperação auditável e inferência controlada.</dd></div><div><dt>Diferencial</dt><dd>No external API dependency, governança e rastreabilidade como requisitos de arquitetura.</dd></div></dl>
+              </div>
+              <div class="comparison"><div><b>Cloud AI</b><span>External inference</span><span>External processing</span><span>Lower control</span></div><div><b>Sovereign AI</b><span>Local inference</span><span>Controlled environment</span><span>Higher auditability</span></div></div>
             </div>
-            <h3>AI-Enhanced Research Information Platform</h3>
-            <p>
-              Plataforma para o grupo MLKD / INESC-ID combinando portal público,
-              CMS, banco vetorial e serviço independente de IA para descoberta de
-              publicações e manutenção editorial.
-            </p>
-            <ul class="tag-list" aria-label="Tecnologias e temas">
-              <li>FastAPI</li>
-              <li>Payload CMS</li>
-              <li>PostgreSQL</li>
-              <li>OpenAlex</li>
-            </ul>
           </article>
-
-          <article class="project-card">
-            <div class="card-topline">
-              <span>Capacitação · IA</span>
-              <span>2026</span>
+          <article class="case-card">
+            <button class="case-summary" type="button" data-case-toggle><span>03</span><strong>EnvIA / Event-Driven AI Pipeline</strong><small>Kafka · AI services · Analytics</small></button>
+            <div class="case-body">
+              <div class="case-copy">
+                <p>Arquitetura orientada a eventos para comunicação escalável entre sistemas institucionais, analytics e serviços de IA.</p>
+                <dl><div><dt>Problema</dt><dd>Fluxos síncronos acoplados reduzem escala, observabilidade e evolução independente.</dd></div><div><dt>Solução</dt><dd>Eventos publicados em tópicos Kafka e consumidos por módulos de IA, API e análise.</dd></div><div><dt>Impacto</dt><dd>Serviços desacoplados, processamento assíncrono e melhor base para automação.</dd></div></dl>
+              </div>
+              <div class="event-flow" aria-hidden="true"><span>Producer</span><i></i><span>Kafka Topic</span><i></i><span>AI</span><span>Analytics</span><span>API</span></div>
             </div>
-            <h3>Chatbot RAG com Dados Próprios</h3>
-            <p>
-              Aula prática sobre fundamentos de RAG, embeddings, busca semântica,
-              bancos vetoriais e construção de assistentes locais com dados
-              próprios.
-            </p>
-            <ul class="tag-list" aria-label="Tecnologias e temas">
-              <li>Embeddings</li>
-              <li>Semantic Search</li>
-              <li>Ollama</li>
-              <li>Streamlit</li>
-            </ul>
+          </article>
+          <article class="case-card">
+            <button class="case-summary" type="button" data-case-toggle><span>04</span><strong>NeuroNarrativa AI</strong><small>Generative AI · Social Impact</small></button>
+            <div class="case-body">
+              <div class="case-copy">
+                <p>Solução de IA generativa para transformar desenhos infantis em animações 3D-style, aproximando engenharia e impacto social.</p>
+                <dl><div><dt>Usuário</dt><dd>Crianças, educadores e iniciativas de inclusão digital.</dd></div><div><dt>Solução</dt><dd>Pipeline criativo com IA generativa, suporte técnico e ferramentas internas.</dd></div><div><dt>Impacto</dt><dd>Uso de software para criatividade, aprendizado e acesso a tecnologia.</dd></div></dl>
+              </div>
+              <div class="impact-panel"><strong>AI for Social Impact</strong><p>Engineering knowledge applied to human-centered digital experiences.</p></div>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="section split" id="experiencia">
-        <div class="section-heading">
-          <p class="eyebrow">Experiência</p>
-          <h2>Base técnica com prática em contextos reais.</h2>
-        </div>
-
-        <div class="timeline" aria-label="Linha do tempo profissional">
-          <article>
-            <span>Atual</span>
-            <h3>Ministério dos Transportes, Portos e Aviação Civil</h3>
-            <p>
-              Atuação em tecnologia no setor público, com foco em aplicações,
-              automação, inteligência artificial e soluções digitais para
-              ambientes institucionais.
-            </p>
-          </article>
-          <article>
-            <span>2024-2028</span>
-            <h3>Universidade do Distrito Federal - UnDF</h3>
-            <p>
-              Graduação presencial em Engenharia de Software, consolidando
-              fundamentos de desenvolvimento, arquitetura, dados e qualidade.
-            </p>
-          </article>
-          <article>
-            <span>2025-2026</span>
-            <h3>Formação contínua em IA</h3>
-            <p>
-              Certificações em prompt engineering, IA generativa, LangChain,
-              modelos open source, guardrails e desenvolvimento web.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section skills">
-        <div class="section-heading compact">
-          <p class="eyebrow">Competências</p>
-          <h2>Stack e temas de interesse.</h2>
-        </div>
-        <div class="skill-columns">
-          <div>
-            <h3>Engenharia</h3>
-            <p>APIs, arquitetura web, integração de sistemas, automação e desenvolvimento full stack.</p>
+      <section class="section playground">
+        <div class="section-heading"><p class="eyebrow">Architecture Playground</p><h2>How I think about RAG systems.</h2></div>
+        <div class="playground-shell">
+          <div class="rag-builder" data-rag-builder>
+            <button class="rag-step active" type="button" data-rag="documents">Documents</button>
+            <button class="rag-step" type="button" data-rag="chunking">Chunking</button>
+            <button class="rag-step" type="button" data-rag="embeddings">Embeddings</button>
+            <button class="rag-step" type="button" data-rag="retrieval">Retrieval</button>
+            <button class="rag-step" type="button" data-rag="llm">LLM</button>
+            <button class="rag-step" type="button" data-rag="audit">Audit</button>
           </div>
-          <div>
-            <h3>IA e dados</h3>
-            <p>RAG, embeddings, bancos vetoriais, LLMs, busca semântica, agentes e avaliação de respostas.</p>
-          </div>
-          <div>
-            <h3>Produto público</h3>
-            <p>Segurança, LGPD, soberania de dados, governança, documentação e confiabilidade operacional.</p>
+          <aside class="rag-readout"><span data-rag-title>Documents</span><p data-rag-copy>Private files, articles, policies or records define the knowledge boundary before any model is involved.</p></aside>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="section-heading"><p class="eyebrow" data-i18n="expKicker">Experience</p><h2 data-i18n="expTitle">Trajetória em software, IA e pesquisa aplicada.</h2></div>
+        <div class="timeline">
+          <article><time>2024</time><h3>UnDTECH</h3><p>Technology & Delivery · Java, Spring Boot, Agile</p></article>
+          <article><time>2025</time><h3>UnDF</h3><p>AI Research · RAG, evaluation, applied research</p></article>
+          <article><time>2025</time><h3>Liia</h3><p>Data Tech Lead · ETL, dashboards, data workflows</p></article>
+          <article><time>2026</time><h3>Ministry of Transport</h3><p>Data Science / Engineering · Python, AI systems, public sector</p></article>
+          <article><time>2026</time><h3>CIIA</h3><p>Applied AI · RAG training, embeddings, semantic search</p></article>
+          <article><time>2026</time><h3>INESC-ID</h3><p>AI Systems Research · FastAPI, pgvector, scientific discovery</p></article>
+        </div>
+      </section>
+
+      <section class="section stack" id="stack">
+        <div class="section-heading"><p class="eyebrow">Technical Toolkit</p><h2>Click a technology to see where it fits.</h2></div>
+        <div class="toolkit"><div class="tech-groups" data-tech-list></div><aside class="tech-readout"><span data-tech-title>RAG</span><p data-tech-copy>Used in: Sovereign AI, MLKD Research Platform, CIIA training.</p></aside></div>
+      </section>
+
+      <section class="section terminal-section">
+        <div class="terminal">
+          <div class="terminal-bar"><span></span><span></span><span></span></div>
+          <div class="terminal-body" aria-live="polite">
+            <p><b>$ whoami</b><br />João Enomoto</p>
+            <p><b>$ skills --ai</b><br />RAG · LLMs · Vector Search · Applied AI</p>
+            <p><b>$ skills --backend</b><br />Python · FastAPI · Java · Spring Boot · PostgreSQL</p>
+            <p><b>$ experience --international</b><br />INESC-ID / Instituto Superior Técnico · Lisbon, Portugal</p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="artigos">
-        <div class="section-heading compact">
-          <p class="eyebrow">Artigos</p>
-          <h2>Escrita sobre IA, software e aprendizado.</h2>
-        </div>
-        <div class="article-list">
-          <a href="https://pt.linkedin.com/pulse/li%C3%A7%C3%B5es-de-uma-llm-soberana-governo-jo%C3%A3o-victor-rikio-enomoto-suqkf" target="_blank" rel="noreferrer">
-            <span>Lições de uma LLM Soberana no Governo</span>
-            <small>LinkedIn · 2026</small>
-          </a>
-          <a href="https://www.linkedin.com/pulse/unlocking-creativity-efficiency-generative-ai-deep-dive-enomoto-fb2rf" target="_blank" rel="noreferrer">
-            <span>Unlocking Creativity and Efficiency with Generative AI</span>
-            <small>LinkedIn · 2026</small>
-          </a>
-          <a href="https://br.linkedin.com/in/joaoenomoto/pt" target="_blank" rel="noreferrer">
-            <span>Pensar como uma máquina: lógica proposicional e IA</span>
-            <small>Medium · 2026</small>
-          </a>
+      <section class="section writing" id="writing">
+        <div class="section-heading"><p class="eyebrow">Research & Writing</p><h2>Ideias técnicas explicadas com clareza.</h2></div>
+        <div class="writing-grid">
+          <a href="https://pt.linkedin.com/pulse/li%C3%A7%C3%B5es-de-uma-llm-soberana-governo-jo%C3%A3o-victor-rikio-enomoto-suqkf" target="_blank" rel="noreferrer"><span>AI Governance</span><strong>Lições de uma LLM Soberana no Governo</strong></a>
+          <a href="https://www.linkedin.com/pulse/unlocking-creativity-efficiency-generative-ai-deep-dive-enomoto-fb2rf" target="_blank" rel="noreferrer"><span>Generative AI</span><strong>Unlocking Creativity and Efficiency with Generative AI</strong></a>
+          <a href="https://br.linkedin.com/in/joaoenomoto/pt" target="_blank" rel="noreferrer"><span>AI Foundations</span><strong>Pensar como uma Máquina</strong></a>
         </div>
       </section>
 
-      <section class="contact" id="contato">
-        <div>
-          <p class="eyebrow">Contato</p>
-          <h2>Vamos conversar sobre software, IA aplicada e produtos digitais.</h2>
-        </div>
-        <div class="contact-actions">
-          <a class="button primary" href="https://www.linkedin.com/in/joaoenomoto/" target="_blank" rel="noreferrer">
-            Abrir LinkedIn
-          </a>
-          <a class="button secondary" href="https://github.com/joaoenomoto" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+      <section class="section github" id="github">
+        <div class="section-heading row"><div><p class="eyebrow">Open Source & Code</p><h2>Repositories from GitHub.</h2></div><a class="button" href="https://github.com/enoGuarana" target="_blank" rel="noreferrer">github.com/enoGuarana</a></div>
+        <div class="repo-grid" data-repos><p class="muted">Loading public repositories...</p></div>
+      </section>
+
+      <section class="contact" id="contact">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something useful.</h2>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/joaoenomoto/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/enoGuarana" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>© <span data-year></span> João Victor Rikio Enomoto</span>
-      <a href="#top">Voltar ao topo</a>
-    </footer>
-
+    <footer class="site-footer"><span>© <span data-year></span> João Victor Rikio Enomoto</span><a href="#top">Back to top</a></footer>
     <script src="script.js"></script>
   </body>
 </html>
